@@ -25,34 +25,35 @@ if (numberUser > numberPc) {
 const outputText = "Vuoi rigiocare?";
 console.log(outputText);
 
-let responseUser = prompt();
+let requestUser = prompt();
+let responseUser = requestUser;
 console.log(responseUser);
-const verificated = responseUser =
+let verificated = false;
 
 if (responseUser === "si") {
-  console.log(responseUser);
-  let numberUser = 0;
-  numberUser = Math.floor(Math.random() * 6 + 1);
-  console.log(numberUser);
+  verificated = true;
+  if ((verificated = true)) {
+    let numberUser = 0;
+    numberUser = Math.floor(Math.random() * 6 + 1);
+    console.log(numberUser);
 
-  let numberPc = 0;
-  numberPc = Math.floor(Math.random() * 6 + 1);
-  console.log(numberPc);
+    let numberPc = 0;
+    numberPc = Math.floor(Math.random() * 6 + 1);
+    console.log(numberPc);
 
-  if (numberUser > numberPc) {
-    console.log("Hai vinto");
-  } else if (numberUser < numberPc) {
-    console.log("Hai perso");
-  } else {
-    console.log("Pareggio");
+    if (numberUser > numberPc) {
+      console.log("Hai vinto");
+    } else if (numberUser < numberPc) {
+      console.log("Hai perso");
+    } else {
+      console.log("Pareggio");
+    }
+    const outputText = "Vuoi rigiocare?";
+    console.log(outputText);
+    let responseUser = prompt("si/no?");
+    console.log(responseUser);
   }
-  const outputText = "Vuoi rigiocare?";
-  console.log(outputText);
-  let responseUser = prompt("si/no?");
-  console.log(responseUser);
-} else if (responseUser === "no") {
-  console.log(responseUser);
-  console.log("Ok, alla prossima");
 } else {
-  console.log("Attendo una tua risposta");
+  verificated = false;
+  console.log("Ok, alla prossima");
 }
