@@ -1,5 +1,5 @@
-const text = "ciao";
-console.log(text);
+// const text = "ciao";
+// console.log(text);
 
 // Mail;
 // Crea una lista di email di invitati ad una festa.
@@ -19,7 +19,7 @@ let listEmails = [
   "pippo@trip.long",
   "pluto@dog.me",
 ];
-console.log(listEmails.indexOf);
+console.log(listEmails);
 
 //Creo variabile per richiedere email all'utente
 const requestEmail = prompt(" Inserisci la tua email, per cortesia");
@@ -30,9 +30,7 @@ console.log(requestEmail);
 // // comunico un messaggio adeguato in base alla presenza o no
 
 for (let i = 0; i < listEmails.length; i++) {
-  let currentEmail = listEmails.indexOf(i);
-  console.log(currentEmail);
-  if (requestEmail === currentEmail) {
+  if (requestEmail === listEmails[i]) {
     console.log("benvenuto");
   } else {
     console.log("Accesso negato");
